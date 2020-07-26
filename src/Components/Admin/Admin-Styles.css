@@ -1,0 +1,16 @@
+.subhead{
+    max-width: 600px;
+    margin:25px;
+    margin-left: 35%;
+}
+
+.adminSecurity, .adminDoctor, .adminPharmacist{
+    display: inline-block;
+    margin: 140px;
+    margin-top: 100px
+}
+
+h3{
+    color: teal;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+.portal{
+    display: inline-block;
+    margin: 110px;
+    margin-top: 175px;
+    border-radius: 5px;
+    color: black;
+}
+
+div.portal:hover{
+    border: 1px solid teal;
+}
+
+img{
+    width:250px;
+    height:250px;
+}
+
+.subhead{
+    color: teal;
+    margin: 15px;
+    text-align: center;
+}
+
+.modalButton{
+    color: white;
+    background: teal;
+}
