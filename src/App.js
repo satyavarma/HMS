@@ -26,8 +26,7 @@ const initialAdminLogIn={
 
 const initialSecurityEntry={
   id:"",
-  action:"",
-  description:"",
+  action:""
 }
 
 const initialPharmacySearch = {
@@ -35,6 +34,7 @@ const initialPharmacySearch = {
 }
 
 const initialDoctorPrescription = {
+  id:"",
   prescription:"",
 }
 
@@ -65,6 +65,10 @@ const initialPharmacistRemove = {
   username:""
 }
 
+const initialDone ={
+
+}
+
 const store = createStore(combineForms(
   {
     securitylogin : initialSecurityLogIn,
@@ -80,6 +84,7 @@ const store = createStore(combineForms(
     pharmaicstremovesettings: initialPharmacistRemove,
     doctorremovesettings: initialDoctorRemove,
     securityremovesettings: initialSecurityRemove,
+    done: initialDone
   }
 ));
 

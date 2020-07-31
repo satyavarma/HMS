@@ -9,7 +9,8 @@ class DoctorLogIn extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            isLogedIn: false
+            isLogedIn: false,
+            username : ""
         };
         this.handleDoctorLogInSubmit = this.handleDoctorLogInSubmit.bind(this);
         this.toggleLogInSuccess = this.toggleLogInSuccess.bind(this);
@@ -24,6 +25,9 @@ class DoctorLogIn extends React.Component {
         })
         .then((response) => {
             if(response.data.success){
+                this.setState({
+                    username : values.username
+                })
                 this.toggleLogInSuccess();
             }
             else{
@@ -53,7 +57,7 @@ class DoctorLogIn extends React.Component {
     render(){
         if (this.state.isLogedIn){
             return (
-                <Doctor toggleLogOut={this.toggleLogOut}/>
+                <Doctor toggleLogOut={this.toggleLogOut} treatedBy={this.state.username} />
             );
         }
         else {
