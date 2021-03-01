@@ -17,6 +17,7 @@ class Security extends React.Component {
         if(values.action=== "in" || values.action === "In" ){
             Axios.post('http://localhost:5000/security/in', {
                 id : values.id.toString(),
+                problem:values.problem,
                 inDetails : dvalue
             })
             .then((response) => {
@@ -66,6 +67,12 @@ class Security extends React.Component {
                     <div>
                         <Control.text model=".id" id="id" name="id"
                             placeholder="University ID"
+                            className="form-control"/>
+                    </div>
+                    <p></p>
+                    <div>
+                        <Control.text model=".problem" id="problem" name="problem"
+                            placeholder="Problem"
                             className="form-control"/>
                     </div>
                     <p></p>

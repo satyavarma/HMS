@@ -26,6 +26,7 @@ const initialAdminLogIn={
 
 const initialSecurityEntry={
   id:"",
+  problem:"",
   action:""
 }
 
